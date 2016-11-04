@@ -1,13 +1,3 @@
-# EMRproject
-To get your repo up and running, use these commands:
-
-* git clone https://github.com/kesensoy/EMRproject.git
-* cd EMRproject/
-* npm install
-* sudo npm install bower -g
-* bower install
-* ember install ember-electron
-
 # Ember-quickstart
 
 This README outlines the details of collaborating on this Ember application.
@@ -60,3 +50,4 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
