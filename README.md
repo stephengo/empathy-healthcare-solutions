@@ -1,5 +1,6 @@
 # EMRproject
-* To get your repo up and running, use these commands:
+To get your repo up and running, use these commands:
+
 * git clone https://github.com/kesensoy/EMRproject.git
 * cd EMRproject/
 * npm install
