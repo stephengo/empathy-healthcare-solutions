@@ -2,7 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-quickstart',
+    //KOE HardCode
+    modulePrefix: 'Empathy',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',

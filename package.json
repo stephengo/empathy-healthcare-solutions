@@ -1,7 +1,7 @@
 {
-  "name": "ember-quickstart",
-  "version": "0.0.0",
-  "description": "Small description for ember-quickstart goes here",
+  "name": "Empathy",
+  "version": "0.0.1",
+  "description": "EmpathyEMR",
   "private": true,
   "directories": {
     "doc": "doc",
