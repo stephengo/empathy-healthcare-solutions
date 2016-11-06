@@ -20,8 +20,16 @@
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
     </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/stackedBars.js"></script>
+
   </head>
   <body>
+
+
+
+
 
     {{content-for "body"}}
 
@@ -31,5 +39,9 @@
     <script src ="assets/js/bootstrap.js"></script>
 
     {{content-for "body-footer"}}
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
   </body>
 </html>
