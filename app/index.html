@@ -11,6 +11,8 @@
 
     <!-- Minifies CSS in Style, gets inserted into dist/assets -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- d3.js local reference -->
     <script type="text/javascript" src="assets/d3/d3.js"></script>
 
     <!-- C3.js for re-usable charting -->
@@ -28,12 +30,51 @@
     <script type="text/javascript" src="assets/vis/grouped.js"></script>
     <script type="text/javascript" src="assets/vis/scatter.js"></script>
     <script type="text/javascript" src="assets/vis/heat.js"></script>
-    <script type="text/javascript" src="assets/vis/c3test.js"></script>
     <style>
     body {
         padding-top: 60px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
+
+
+
+
+    /*
+    .chart rect {
+      fill: steelblue;
+    }
+    */
+    .chart .legend {
+      fill: black;
+      font: 14px sans-serif;
+      text-anchor: start;
+      font-size: 12px;
+    }
+
+    .chart text {
+      fill: white;
+      font: 10px sans-serif;
+      text-anchor: end;
+    }
+
+    .chart .label {
+      fill: black;
+      font: 14px sans-serif;
+      text-anchor: end;
+    }
+
+    .bar:hover {
+      fill: brown;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+
     </style>
 
 
@@ -46,6 +87,13 @@
 
 
     {{content-for "body"}}
+
+    <div class="container">
+    <svg class="chart"></svg>
+    </div>
+
+    <script type="text/javascript" src="assets/vis/c3test.js"></script>
+    <script type="text/javascript" src="assets/vis/box.js"></script>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <!-- KOE HardCode-->
