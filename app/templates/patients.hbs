@@ -156,6 +156,18 @@
 
   </fieldset>
   </form>
+<div class="row">
 
+  <div class="col-sm-6">
+  <ul>
+  {{#each model as |patients|}}
+    <li>{{patients.name}}</li>
+  {{/each}}
+</ul>
+</div>
+<div class="col-sm-6">
+{{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+</div>
+</div>
 
 </div>

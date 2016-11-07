@@ -11,20 +11,27 @@
 
     <!-- Minifies CSS in Style, gets inserted into dist/assets -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <script type="text/javascript" src="assets/d3.js"></script>
+    <script type="text/javascript" src="assets/d3/d3.js"></script>
+
+    <!-- C3.js for re-usable charting -->
+    <link href="assets/c3/c3.css" rel="stylesheet" />
+    <script type="text/javascript" src="assets/c3/c3.js"></script>
+
 
     {{content-for "head-footer"}}
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
     <!-- These are the script tags that need to be injected into insights.js. -->
-    <script type="text/javascript" src="assets/stackedBars.js"></script>
-    <script type="text/javascript" src="assets/stackedArea.js"></script>
-    <script type="text/javascript" src="assets/grouped.js"></script>
-    <script type="text/javascript" src="assets/vis3.js"></script>
+    <script type="text/javascript" src="assets/vis/stackedBars.js"></script>
+    <script type="text/javascript" src="assets/vis/stackedArea.js"></script>
+    <script type="text/javascript" src="assets/vis/grouped.js"></script>
+    <script type="text/javascript" src="assets/vis/scatter.js"></script>
+    <script type="text/javascript" src="assets/vis/heat.js"></script>
+    <script type="text/javascript" src="assets/vis/c3test.js"></script>
     <style>
     body {
-        padding-top: 30px;
+        padding-top: 60px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
     </style>
@@ -47,11 +54,100 @@
 
     {{content-for "body-footer"}}
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- highcharts local source -->
+    <script src="assets/code/highcharts.js"></script>
+    <script src="assets/code/modules/heatmap.js"></script>
+    <script src="assets/code/modules/exporting.js"></script>
 
+    <div class ="container">
+      <h2>Population Insights</h2>
+      <hr>
+      <div class="col-sm-6">
+        <div id="container3" style="min-width: 150px; height: 400px; max-width: 900px; margin: 0 auto"></div>
+      </div>
+      <div class="col-sm-6">
+        <div id="container2" style="min-width: 310px; height: 400px; max-width: 900px; margin: 0 auto"></div>
+      </div>
+      <h2>Patient Insights</h2>
+      <hr>
+      <div class="col-sm-6">
+        <div id="container1" style="min-width: 150px; height: 400px; max-width: 900px; margin: 0 auto"></div>
+      </div>
+      <div class="col-sm-6">
+        <div id="scat" style="min-width: 310px; height: 400px; max-width: 900px; margin: 0 auto"></div>
+      </div>
+      <div class="col-sm-6">
+        <div id="hea" style="min-width: 310px; height: 400px; max-width: 900px; margin: 0 auto"></div>
+      </div>
+      <div class="col-sm-6">
+        <table class="table table-inverse">
+          <thead class="thead-inverse">
+            <tr>
+              <th>#</th>
+              <th>Patient id</th>
+              <th>Risk Level</th>
+              <th>Disease</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>0275</td>
+              <td>High</td>
+              <td>Heart Failure</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>8397</td>
+              <td>Medium</td>
+              <td>Heart Failure</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>1239</td>
+              <td>High</td>
+              <td>Coronary Heart Disease</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>1239</td>
+              <td>High</td>
+              <td>Coronary Heart Disease</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>1239</td>
+              <td>High</td>
+              <td><input></input></td>
+            </tr>
+            <tr>
+              <td><input></input></td>
+              <td><input></input></td>
+              <td><input></input></td>
+              <td><input></input></td>
+            </tr>
+            <tr>
+              <td><input></input></td>
+              <td><input></input></td>
+              <td><input></input></td>
+              <td>
+                    <select id="selectbasic" name="selectbasic" class="form-control">
+                      <option value="1">Coronary Artery Disease</option>
+                      <option value="2">Heart Damage or Failure</option>
+                      <option value="3">Stroke</option>
+                      <option value="4">Heart Attack</option>
+                      <option value="5">Congenital Heart Defect</option>
+                      <option value="6">Cardiomyopathy</option>
+                      <option value="7">Peripheral Artery Disease</option>
+                      <option value="8">NA</option>
+                    </select>
+              </td>
+            </tr>
 
-
+          </tbody>
+        </table>
+      </div>
+    </div>
 
   </body>
 </html>
