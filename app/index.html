@@ -77,7 +77,17 @@
 
     </style>
 
-
+    <script>
+    $(document).ready(function(){
+    $("#visualization").hide();
+    $("#hide").click(function(){
+        $("#visualization").hide();
+    });
+    $("#show").click(function(){
+        $("#visualization").show();
+    });
+    });
+    </script>
 
   </head>
   <body>
@@ -88,9 +98,9 @@
 
     {{content-for "body"}}
 
-    <div class="container">
+    <!-- <div class="container">
     <svg class="chart"></svg>
-    </div>
+    </div> -->
 
     <script type="text/javascript" src="assets/vis/c3test.js"></script>
     <script type="text/javascript" src="assets/vis/box.js"></script>
@@ -107,7 +117,10 @@
     <script src="assets/code/modules/heatmap.js"></script>
     <script src="assets/code/modules/exporting.js"></script>
 
-    <div class ="container">
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <div class ="container" id="visualization">
       <h2>Population Insights</h2>
       <hr>
       <div class="col-sm-6">
