@@ -19,8 +19,11 @@ You will need the following things properly installed on your computer.
 * `npm install`
 * `bower install`
 
-## Installation for Mac
+## Installation for Windows
 
+* Open Administrator Windows PowerShell.
+* 'npm install --global --production windows-build-tools'
+* Exit PowerShell and open command prompt.
 * `git clone <repository-url>` this repository
 * `cd empathy-healthcare-solutions`
 * `npm install`
